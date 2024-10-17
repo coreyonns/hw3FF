@@ -19,7 +19,7 @@
          <td><?php echo $team['team_name']; ?></td>
         <td><?php echo $team['team_division']; ?></td>
          <td><?php echo $team['avg_points']; ?></td>
-          <td><?php echo $team['postion_rank']; ?></td>
+          <td><?php echo $team['position_rank']; ?></td>
       </tr>
       <?php
     }
