@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Fantasy Football Team</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="players.php">Players</a>
@@ -25,10 +25,7 @@
              <li class="nav-item">
           <a class="nav-link" href="teams.php">Teams</a>
         </li>        <li class="nav-item">
-          <a class="nav-link" href="players-with-rankings.php">Players with Ranking</a>
-        </li>        <li class="nav-item">
-          <a class="nav-link" href="get-result.php">Get result</a>
-        </li>       
+          <a class="nav-link" href="players-ppg-and-rankings.php">Players PPG and Rankings</a>     
       </ul>
     </div>
   </div>
