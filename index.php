@@ -2,7 +2,7 @@
 $pageTitle="Home";
 include "view-header.php";
 ?>
-    <h1>Home</h1>
+    <h1>My Fantasy Football Team</h1>
   <?php
 include "view-footer.php";
 ?>
