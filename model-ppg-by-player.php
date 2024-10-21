@@ -2,8 +2,8 @@
 function selectPpgByPlayer($pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT t.team_id, team_name, team_division, avg_points, position_rank FROM `team` t join ranking r on r.team_id= t.team_id 
-        where r.team_id=?");
+        $stmt = $conn->prepare("SELECT p.player_id, player_name,player_position, avg_points, position_rank 
+FROM `player` p join ranking r on r.player_id= p.player_id where r.player_id=1");
        $stmt->bind_param("i", $pid);
         $stmt->execute();
         $result = $stmt->get_result();
