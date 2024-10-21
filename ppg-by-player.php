@@ -4,7 +4,7 @@ require_once("model-ppg-by-player.php");
 
 $pageTitle="PPG by Player";
 include "view-header.php";
-$ppg = selectPpgByPlayer($_POST['cid']);
+$ppg = selectPpgByPlayer($_POST['pid']);
 include "view-ppg-by-player.php";
 include "view-footer.php";
 ?>
