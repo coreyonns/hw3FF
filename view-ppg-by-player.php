@@ -1,0 +1,29 @@
+<h1>PPG by Player</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+       <th>ID</th>
+       <th>Team Name</th>
+       <th>Division</th>
+        <th>Points Per Game</th>
+        <th>Postion Rank</th>
+      </tr>
+    </thead>
+    <tbody>   
+  <?php
+    while ($ppg = $ppgs->fetch_assoc()) {
+      ?>
+      <tr>
+        <td><?php echo $ppg['team_id']; ?></td>
+         <td><?php echo $ppg['team_name']; ?></td>
+        <td><?php echo $ppg['team_division']; ?></td>
+         <td><?php echo $ppg['avg_points']; ?></td>
+          <td><?php echo $ppg['position_rank']; ?></td>
+      </tr>
+      <?php
+    }
+   ?>
+      </tbody>
+  </table>
+</div>
