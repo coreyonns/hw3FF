@@ -2,8 +2,8 @@
 function selectPlayers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_id, player_name, player_position
- FROM `player`");
+        $stmt = $conn->prepare("SELECT p.player_id, player_name, player_position, avg_points,position_rank
+ FROM `player` p join ranking r on  r.player_id=p.player_id where r.player_id=?");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
