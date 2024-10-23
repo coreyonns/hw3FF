@@ -4,7 +4,7 @@ require_once("model-ppg-and-ranking.php");
 
 $pageTitle=" Players PPG and Rankings";
 include "view-header.php";
-$players = selectPlayers();
+$ppgs = selectPPGandRanking();
 include "view-ppg-and-ranking.php";
 include "view-footer.php";
 ?>
