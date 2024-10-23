@@ -2,9 +2,9 @@
 require_once("util-db.php");
 require_once("model-ppg-and-ranking.php");
 
-$pageTitle=" Players PPG and Rankings";
+$pageTitle="Players PPG and Rankings";
 include "view-header.php";
-$ppgs = selectPPGandRanking();
+$ppg = selectPPGandRanking();
 include "view-ppg-and-ranking.php";
 include "view-footer.php";
 ?>
