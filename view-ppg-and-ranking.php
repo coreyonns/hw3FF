@@ -1,25 +1,32 @@
-<h1>PPG and Rankings</h1>
-<div class="card-group">
-
-  <?php
-    while ($player = $players->fetch_assoc()) {
-      ?>
-      <div class="card">
-    <div class="card-body">
-      <h5 class="card-title"><?php echo $player['player_name']; ?></h5>
-      <p class="card-text">
-    
-      </p>
-      <p class="card-text"><small class="text-body-secondary">Position: <?php echo $player['player_position']; ?></small></p>
-    </div>
-  </div>
+<h1>PPG and Ranking</h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-            <td><?php echo $player['player_id']; ?></td>
-             <td><?php echo $player['player_name']; ?></td>
-            <td><?php echo $player['player_position']; ?></td>
-             <td><a href="teams-by-player.php?id=<?php echo $player['player_id']; ?>">Teams</a></td>
+       <th>ID</th>
+       <th>Player Name</th>
+       <th>Position</th>
+        <th>Avg Points</th>
+         <th>Position Rank</th>
+      </tr>
+    </thead>
+    <tbody>   
+  <?php
+    while ($ppg = $ppgs->fetch_assoc()) {
+      ?>
+      <tr>
+        <td><?php echo $ppg['team_id']; ?></td>
+         <td><?php echo $ppg['team_name']; ?></td>
+        <td><?php echo $ppg['team_division']; ?></td>
+          <td><?php echo $ppg['avg_points']; ?></td>
+            <td><?php echo $ppg['position_rank']; ?></td>
+
+
+        
       </tr>
       <?php
     }
    ?>
-      </div>
+      </tbody>
+  </table>
+</div>
