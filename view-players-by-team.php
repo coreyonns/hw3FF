@@ -11,12 +11,12 @@
     </thead>
     <tbody>   
   <?php
-    while ($playertean = $playerteams->fetch_assoc()) {
+    while ($playerteam = $playerteams->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $team['team_id']; ?></td>
-         <td><?php echo $team['team_name']; ?></td>
-        <td><?php echo $team['team_division']; ?></td>
+        <td><?php echo $playerteam['player_id']; ?></td>
+         <td><?php echo $playerteam['player_name']; ?></td>
+        <td><?php echo $playerteam['player_position']; ?></td>
         
       </tr>
       <?php
