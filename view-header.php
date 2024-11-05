@@ -26,7 +26,6 @@
           <a class="nav-link" href="teams.php">Teams</a>
         </li>        <li class="nav-item">
           <a class="nav-link" href="ppg-and-ranking.php">Players PPG and Ranking</a>     
-      </ul>
        <li class="nav-item">
           <a class="nav-link" href="information.php">Information</a>
         </li>
