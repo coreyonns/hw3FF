@@ -30,6 +30,7 @@
        <li class="nav-item">
           <a class="nav-link" href="information.php">Information</a>
         </li>
+      </ul>
     </div>
   </div>
 </nav>
