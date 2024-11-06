@@ -27,5 +27,35 @@ function insertTeams($tName,$tDiv) {
     }
 }
 
+function updateTeams($tName,$tDiv,$tid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("UPDATE `team` set 'team_name` = ? , `team_division` = ? where team_id=?");
+         $stmt->bind_param("ssi", $tName,$tDiv,$tid);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
+function deleteTeams($tid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("DELETE from 'team' where team_id=?");
+         $stmt->bind_param("i", $tid);
+      $success =  $stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+
+
 ?>
 
