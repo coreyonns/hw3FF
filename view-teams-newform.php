@@ -25,6 +25,7 @@
             <label for="tDiv" class="form-label">Team Division</label>
             <input type="text" class="form-control" id="tDiv" name="tDiv">
           </div>
+              <input type="hidden" name= "actionType" value= "Add">
           <button type="submit" class="btn btn-primary">Save</button>
         </form>  
       </div>
