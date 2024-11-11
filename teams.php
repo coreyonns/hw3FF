@@ -20,7 +20,8 @@ if (isset($_POST['actionType'])){
         } else {
           echo '<div class="alert alert-danger" role="alert">Error!</div>';
         }
-    break;}
+    break;
+  }
 }
 
 $teams = selectTeams();
