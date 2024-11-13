@@ -45,7 +45,7 @@ function updateTeams($tName,$tDiv,$tid) {
 function deleteTeams($tid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE from 'team' where team_id=?");
+        $stmt = $conn->prepare("DELETE from team where team_id=?");
          $stmt->bind_param("i", $tid);
       $success =  $stmt->execute();
         $conn->close();
