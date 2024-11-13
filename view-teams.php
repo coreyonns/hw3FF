@@ -29,6 +29,9 @@ include "view-teams-newform.php";
          <td><?php echo $team['team_name']; ?></td>
         <td><?php echo $team['team_division']; ?></td>
         <td>
+          <?php
+            include "view-teams-editform.php";
+          ?>
         </td>
         <td>
           <form method="post" action="">
