@@ -16,6 +16,8 @@ include "view-players-newform.php";
            <th>Name</th>
            <th>Position</th>
             <th></th>
+            <th></th>
+            <th></th>
       </tr>
     </thead>
     <tbody>   
@@ -27,7 +29,10 @@ include "view-players-newform.php";
              <td><?php echo $player['player_name']; ?></td>
             <td><?php echo $player['player_position']; ?></td>
              <td><a href="teams-by-player.php?id=<?php echo $player['player_id']; ?>">Teams</a></td>
-           
+           <td>
+           </td>
+        <td>
+        </td>
       </tr>
       <?php
     }
