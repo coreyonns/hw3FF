@@ -29,7 +29,7 @@ function insertPlayers($pName,$pPosition) {
 function updatePlayers($pName,$pPosition,$pid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `player` set `player_name`=?, `player_position`=? where player_id=?);
+        $stmt = $conn->prepare("update `player` set `player_name`=?, `player_position`=? where player_id=?)";
          $stmt->bind_param("ssi", $pName,$pPosition,$pid);
        $success= $stmt->execute();
         $conn->close();
