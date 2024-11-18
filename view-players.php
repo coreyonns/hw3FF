@@ -1,4 +1,13 @@
-<h1>Players</h1>
+<div class = "row">
+<div class = "col">
+  <h1>Players</h1>
+  </div>
+  <div class ="col-auto">
+<?php
+include "view-players-newform.php";
+?>
+</div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
