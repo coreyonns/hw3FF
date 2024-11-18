@@ -31,7 +31,13 @@ include "view-players-newform.php";
              <td><?php echo $player['player_name']; ?></td>
             <td><?php echo $player['player_position']; ?></td>
              <td><a href="teams-by-player.php?id=<?php echo $player['player_id']; ?>">Teams</a></td>
-         <td>
+          <td>
+            <?php
+                include "view-players-editform.php";
+            ?>
+          </td>
+         
+        <td>
           <form method="post" action="">
             <input type="hidden" name="pid" value="<?php echo $player['player_id']; ?>">
             <input type="hidden" name="actionType" value="Delete">
