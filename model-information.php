@@ -17,8 +17,8 @@ FROM `information`");
 function insertInfo($pName,$pYards,$pTouches,$pTouchdowns) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `information` `player_name`, `yards`, `touches`, `touchdowns` VALUES (?, ?, ?, ?))";
-         $stmt->bind_param("ss", $pName,$pYards,$pTouches,$pTouchdowns);
+        $stmt = $conn->prepare("INSERT INTO `information` (`player_name`, `yards`, `touches`, `touchdowns`) VALUES (?, ?, ?, ?))";
+         $stmt->bind_param("siii", $pName,$pYards,$pTouches,$pTouchdowns);
        $success= $stmt->execute();
         $conn->close();
         return $success;
@@ -27,11 +27,11 @@ function insertInfo($pName,$pYards,$pTouches,$pTouchdowns) {
         throw $e;
     }
 }
-function updateInfo($pName,$pPosition,$pid) {
+function updateInfo($pName,$pYards,$pTouches,$pTouchdowns,$iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `player` set `player_name`=?, `player_position`=? where player_id=?");
-         $stmt->bind_param("ssi", $pName,$pPosition,$pid);
+        $stmt = $conn->prepare("update `information` set `player_name`=?, `yards`=?,'touches'=?,'touchdowns'=? where information_id=?");
+         $stmt->bind_param("siiii", $pName,$pYards,$pTouches,$pTouchdowns);
        $success= $stmt->execute();
         $conn->close();
         return $success;
@@ -40,11 +40,11 @@ function updateInfo($pName,$pPosition,$pid) {
         throw $e;
     }
 }
-function deleteInfo($pid) {
+function deleteInfo($iid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("delete from player where player_id=?");
-         $stmt->bind_param("i", $pid);
+        $stmt = $conn->prepare("delete from information where information_id=?");
+         $stmt->bind_param("i", $iid);
        $success= $stmt->execute();
         $conn->close();
         return $success;
