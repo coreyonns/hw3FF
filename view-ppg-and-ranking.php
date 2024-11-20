@@ -29,7 +29,7 @@ include "view-ppg-newform.php";
     while ($ppg = $ppgs->fetch_assoc()) {
       ?>
       <tr>
-        <td><?php echo $ppg['ranking_id']; ?></td>
+        <td><?php echo $ppg['player_id']; ?></td>
          <td><?php echo $ppg['player_name']; ?></td>
         <td><?php echo $ppg['player_position']; ?></td>
           <td><?php echo $ppg['avg_points']; ?></td>
