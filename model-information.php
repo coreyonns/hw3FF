@@ -12,4 +12,5 @@ FROM `information`");
         $conn->close();
         throw $e;
     }
+}
 ?>
