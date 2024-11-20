@@ -1,4 +1,13 @@
-<h1>PPG and Ranking</h1>
+<div class = "row">
+<div class = "col">
+  <h1>PPG and Ranking</h1>
+  </div>
+  <div class ="col-auto">
+<?php
+include "view-ppg-newform.php";
+?>
+</div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
