@@ -29,7 +29,7 @@ function insertPPGandRanking($rank,$avg) {
 function updatePPGandRanking($rank,$avg,$rid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("update `ranking` set `position_rank`=?, `avg_points`=? where ranking_id=?");
+        $stmt = $conn->prepare("update ranking set position_rank=?, avg_points =? where ranking_id=?");
       $stmt->bind_param("iii", $rank,$avg,$rid);
      $success=$stmt->execute();
         $conn->close();
