@@ -17,6 +17,9 @@ include "view-ppg-newform.php";
        <th>Position</th>
         <th>Avg Points</th>
          <th>Position Rank</th>
+          <th></th>
+          <th></th>
+
       </tr>
     </thead>
     <tbody>   
@@ -29,6 +32,12 @@ include "view-ppg-newform.php";
         <td><?php echo $ppg['player_position']; ?></td>
           <td><?php echo $ppg['avg_points']; ?></td>
             <td><?php echo $ppg['position_rank']; ?></td>
+        <td>
+          
+        </td>
+        <td>
+          
+        </td>
 
 
         
