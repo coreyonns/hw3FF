@@ -13,14 +13,40 @@ function selectPPGandRanking() {
         throw $e;
     }
 }
-function insertPPGandRanking() {
+function insertPPGandRanking($rank,$avg) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `ranking` ( `player_id`, `team_id`, `position_rank`, `avg_points`) VALUES ('11', '11', '11', '9th', '27')");
-        $stmt->execute();
-        $result = $stmt->get_result();
+        $stmt = $conn->prepare("INSERT INTO `ranking` ( `position_rank`, `avg_points`) VALUES (?,?)");
+      $stmt->bind_param("ii", $rank,$avg);
+     $success=$stmt->execute();
         $conn->close();
-        return $result;
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function updatePPGandRanking($rank,$avg,$rid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("update `ranking` set `position_rank`=?, `avg_points`=? where ranking_id=?");
+      $stmt->bind_param("iii", $rank,$avg,$rid);
+     $success=$stmt->execute();
+        $conn->close();
+        return $success;
+    } catch (Exception $e) {
+        $conn->close();
+        throw $e;
+    }
+}
+function deletePPGandRanking($rid) {
+    try {
+        $conn = get_db_connection();
+        $stmt = $conn->prepare("delete from ranking where ranking_id=? ");
+      $stmt->bind_param("i", $rid);
+     $success=$stmt->execute();
+        $conn->close();
+        return $success;
     } catch (Exception $e) {
         $conn->close();
         throw $e;
