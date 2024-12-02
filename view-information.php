@@ -16,6 +16,8 @@ include "view-information-newform.php";
            <th>Total Yards Last Game</th>
            <th>Total Touches Last Game</th>
             <th>Total Touchdowns Last Game</th>
+            <th></th>
+            <th></th>
       </tr>
     </thead>
     <tbody>   
@@ -27,7 +29,12 @@ include "view-information-newform.php";
              <td><?php echo $infos['yards']; ?></td>
             <td><?php echo $infos['touches']; ?></td>
              <td><?php echo $infos['touchdowns']; ?></td>
-           
+           <td>
+             
+           </td>
+        <td>
+          
+        </td>
       </tr>
       <?php
     }
