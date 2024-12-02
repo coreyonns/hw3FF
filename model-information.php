@@ -17,7 +17,7 @@ function insertInfo($iYards,$iTouches,$iTouchdowns) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("INSERT INTO `information` ( `yards`, `touches`, `touchdowns`) VALUES (?,?,?,?);");
-          $stmt->bind_param("iii"$iYards,$iTouches,$iTouchdowns);
+          $stmt->bind_param("iii",$iYards,$iTouches,$iTouchdowns);
         $success=$stmt->execute();
         $conn->close();
         return $success;
