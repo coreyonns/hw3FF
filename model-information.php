@@ -2,7 +2,7 @@
 function selectInfo() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_name,yards,touches,touchdowns
+        $stmt = $conn->prepare("SELECT information_id,player_name,yards,touches,touchdowns
 FROM `information`");
         $stmt->execute();
         $result = $stmt->get_result();
