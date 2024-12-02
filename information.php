@@ -15,15 +15,15 @@ if (isset($_POST['actionType'])){
         }
     break;
      case "Delete":
-      if(deleteInfo($_POST['pid'])) {
-        echo '<div class="alert alert-success" role="alert">Player deleted!</div>';
+      if(deleteInfo($_POST['iid'])) {
+        echo '<div class="alert alert-success" role="alert">Info deleted!</div>';
         } else {
           echo '<div class="alert alert-danger" role="alert">Error!</div>';
         }
     break;
      case "Edit":
-      if(updateInfo($_POST['pName'], $_POST['pPosition'],$_POST['pid'])) {
-        echo '<div class="alert alert-success" role="alert">Player edited!</div>';
+      if(updateInfo($_POST['iYards'], $_POST['iTouches'],$_POST['iTouchdowns'],$_POST['iid'])) {
+        echo '<div class="alert alert-success" role="alert">Info edited!</div>';
         } else {
           echo '<div class="alert alert-danger" role="alert">Error!</div>';
         }
