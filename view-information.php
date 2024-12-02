@@ -1,4 +1,13 @@
-<h1>Information</h1>
+<div class = "row">
+<div class = "col">
+  <h1>Information</h1>
+  </div>
+  <div class ="col-auto">
+<?php
+include "view-information-newform.php";
+?>
+</div>
+</div>
 <div class="table-responsive">
   <table class="table">
     <thead>
