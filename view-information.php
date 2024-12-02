@@ -32,7 +32,9 @@ include "view-information-newform.php";
             <td><?php echo $infos['touches']; ?></td>
              <td><?php echo $infos['touchdowns']; ?></td>
            <td>
-             
+             <?php
+            include "view-information-editform.php";
+              ?>
            </td>
         <td>
            <form method="post" action="">
