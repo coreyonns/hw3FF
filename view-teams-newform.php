@@ -19,7 +19,10 @@
         <form method ="post" action="">
           <div class="mb-3">
             <label for="tName" class="form-label">Team Name</label>
-            <input type="text" class="form-control" id="tName" name="tName">
+<?php
+$teamList= selectTeamForInput();
+include "view-team-input-list.php";
+?>
           </div>
           <div class="mb-3">
             <label for="tDiv" class="form-label">Team Division</label>
