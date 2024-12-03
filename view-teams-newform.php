@@ -20,7 +20,7 @@
           <div class="mb-3">
             <label for="tName" class="form-label">Team Name</label>
 <?php
-$teamList= selectTeamForInput();
+$teamList= selectTeamsForInput();
 include "view-team-input-list.php";
 ?>
           </div>
