@@ -27,19 +27,7 @@ function selectTeamsForInput() {
     }
 }
 
-function selectPlayersForInput() {
-    try {
-        $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT player_id, player_name,player_position FROM `player` order by player_name ");
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $conn->close();
-        return $result;
-    } catch (Exception $e) {
-        $conn->close();
-        throw $e;
-    }
-}
+
 function insertTeams($tName,$tDiv) {
     try {
         $conn = get_db_connection();
