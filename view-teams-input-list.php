@@ -1,5 +1,5 @@
 <select class="form-select" id="tName" name="tName">
-  <option selected>Open this select menu</option>
+  <option selected>NFL Teams</option>
   <option value="Washington Commanders">Washhngton Commanders</option>
   <option value="New York Jets">New York Jets</option>
   <option value="Detroit Lions">Detroit Lions</option>
