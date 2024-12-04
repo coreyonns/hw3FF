@@ -7,5 +7,3 @@ while ($teamItem= $teamList->fetch_assoc()){
 }
 ?>  
 </select>
-  <option value="32">Two</option>
-</select>
