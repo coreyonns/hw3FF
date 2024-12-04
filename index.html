@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive JavaScript Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive JavaScript Website</h1>
+    </header>
+    <main>
+        <!-- Dynamic Content Section -->
+        <section>
+            <h2>Dynamic Content</h2>
+            <button id="loadContentButton">Load Content</button>
+            <div id="dynamicContent"></div>
+        </section>
+
+        <!-- Form Section -->
+        <section>
+            <h2>Sign Up Form</h2>
+            <form id="signupForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Submit</button>
+            </form>
+               <p id="formMessage"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Interactive JavaScript Project</p>
+    </footer>
+
+    <script>
+        // Dynamic Content Loading
+        document.getElementById("loadContentButton").addEventListener("click", () => {
+            const contentDiv = document.getElementById("dynamicContent");
+            contentDiv.innerHTML = "<p>This content was dynamically loaded with JavaScript!</p>";
+        });
+
+        // Form Validation and Submission Handling
+        document.getElementById("signupForm").addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent actual form submission
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("formMessage");
+
+            if (name && email) {
+                message.textContent = `Thank you for signing up, ${name}!`;
+                message.style.color = "green";
+            } else {
+                message.textContent = "Please fill out all fields correctly.";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
