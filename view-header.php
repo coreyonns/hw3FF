@@ -203,16 +203,25 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ndR56aNeODv77a5zRfPEuKzZ5nVs8TxTAn26wV7Rnvnu3HTQK5w1V9PyXbXYUNnhR" crossorigin="anonymous"></script>
 
     <script>
-      function updateClock() {
-        const now = new Date();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-      }
+      <script>
+  function updateClock() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    
+    // Convert to 12-hour format and determine AM/PM
+    const period = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;  // Convert to 12-hour format
+    hours = hours ? hours : 12; // 0 becomes 12 for 12 AM/PM
+    
+    // Display the clock
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds} ${period}`;
+  }
 
-      setInterval(updateClock, 1000); // Update every second
-      updateClock(); // Initialize clock immediately
+  setInterval(updateClock, 1000); // Update every second
+  updateClock(); // Initialize clock immediately
+</script>
     </script>
   </body>
 </html>
