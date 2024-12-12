@@ -199,6 +199,18 @@
 document.getElementById('theme-toggle').onclick = toggleTheme;
 
 </script>
+    <script>
+      const hoverElements = document.querySelectorAll('.hover-effect');
+hoverElements.forEach(element => {
+  element.addEventListener('mouseover', () => {
+    element.style.transform = 'scale(1.1)';
+    element.style.transition = '0.3s ease';
+  });
+  element.addEventListener('mouseout', () => {
+    element.style.transform = 'scale(1)';
+  });
+});
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb9kVOGy4MxVg1n04g6e37NdF2fQtrdQ5ooPjtFqX3v30zIa0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ndR56aNeODv77a5zRfPEuKzZ5nVs8TxTAn26wV7Rnvnu3HTQK5w1V9PyXbXYUNnhR" crossorigin="anonymous"></script>
   </body>
