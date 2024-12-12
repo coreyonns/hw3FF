@@ -182,7 +182,20 @@
         <div class="card-body">
           <h5 class="card-title">Top Players</h5>
           <p class="card-text">Check out the top-performing players in the league!</p>
-          <button>View Stats</button>
+          <button>View Stats</button>  <?php
+    while ($playerteam = $playerteams->fetch_assoc()) {
+      ?>
+      <tr>
+        <td><?php echo $playerteam['player_id']; ?></td>
+         <td><?php echo $playerteam['player_name']; ?></td>
+        <td><?php echo $playerteam['player_position']; ?></td>
+        
+      </tr>
+      <?php
+    }
+   ?>
+
+          
         </div>
       </div>
     </div>
