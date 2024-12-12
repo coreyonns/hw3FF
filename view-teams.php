@@ -60,15 +60,75 @@ include "view-teams-newform.php";
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Search functionality
+  const searchInput = document.createElement("input");
+  searchInput.type = "text";
+  searchInput.placeholder = "Search teams...";
+  searchInput.className = "form-control mb-3";
+  document.querySelector(".table-responsive").insertBefore(searchInput, document.querySelector(".table"));
 
-  document.addEventListener("DOMContentLoaded", () => {
-  // Add click functionality to highlight rows
-  const tableRows = document.querySelectorAll(".table tbody tr");
-  tableRows.forEach(row => {
-    row.addEventListener("click", () => {
-      tableRows.forEach(r => r.classList.remove("table-active")); // Clear other highlights
-      row.classList.add("table-active"); // Highlight selected row
+  // Event listener for search input to filter teams
+  searchInput.addEventListener("input", filterTeams);
+
+  // Sort functionality for table columns
+  const headers = document.querySelectorAll(".table th");
+  let sortDirection = { id: true, name: true, division: true }; // Track sort direction
+
+  headers.forEach((header, index) => {
+    header.style.cursor = "pointer";
+    header.addEventListener("click", () => sortTable(index));
+  });
+
+  // Delete button functionality with confirmation prompt
+  const deleteButtons = document.querySelectorAll("button[data-action='delete']");
+  deleteButtons.forEach(button => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent form submission
+      const teamName = button.closest("tr").querySelector("td:nth-child(2)").textContent;
+      const confirmed = confirm(`Are you sure you want to delete the team "${teamName}"?`);
+      if (confirmed) {
+        button.closest("form").submit(); // Submit the delete form if confirmed
+      }
     });
   });
 
+  // Function to filter teams based on the search input
+  function filterTeams() {
+    const searchValue = searchInput.value.toLowerCase();
+    const rows = document.querySelectorAll(".table tbody tr");
+    rows.forEach(row => {
+      const teamName = row.cells[1]?.textContent.toLowerCase();
+      const division = row.cells[2]?.textContent.toLowerCase();
+      if (teamName.includes(searchValue) || division.includes(searchValue)) {
+        row.style.display = "";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  }
+
+  // Function to sort the table by a column (ID, Team Name, or Division)
+  function sortTable(columnIndex) {
+    const rows = Array.from(document.querySelectorAll(".table tbody tr"));
+    const key = columnIndex === 0 ? "id" : columnIndex === 1 ? "name" : "division";
+
+    // Toggle sorting direction for each column
+    const direction = sortDirection[key] ? 1 : -1;
+    sortDirection[key] = !sortDirection[key];
+
+    // Sort the rows based on the selected column
+    rows.sort((a, b) => {
+      const cellA = a.cells[columnIndex].textContent.trim().toLowerCase();
+      const cellB = b.cells[columnIndex].textContent.trim().toLowerCase();
+      return cellA.localeCompare(cellB) * direction;
+    });
+
+    // Reattach sorted rows to the table body
+    const tbody = document.querySelector(".table tbody");
+    tbody.innerHTML = "";
+    rows.forEach(row => tbody.appendChild(row));
+  }
+});
 </script>
+
