@@ -58,3 +58,17 @@ include "view-teams-newform.php";
       </tbody>
   </table>
 </div>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+  // Add click functionality to highlight rows
+  const tableRows = document.querySelectorAll(".table tbody tr");
+  tableRows.forEach(row => {
+    row.addEventListener("click", () => {
+      tableRows.forEach(r => r.classList.remove("table-active")); // Clear other highlights
+      row.classList.add("table-active"); // Highlight selected row
+    });
+  });
+
+</script>
