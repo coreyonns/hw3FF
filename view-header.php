@@ -15,6 +15,46 @@
         color: #333;
       }
 
+      /* Dark Theme Styles */
+      body.dark-theme {
+        background-color: #2c3e50; /* Dark background */
+        color: #ecf0f1; /* Light text color */
+      }
+
+      body.dark-theme .navbar {
+        background-color: #34495e; /* Darker navbar */
+      }
+
+      body.dark-theme .navbar-brand,
+      body.dark-theme .navbar-nav .nav-link {
+        color: #ecf0f1; /* Light text color */
+      }
+
+      body.dark-theme .navbar-nav .nav-link:hover {
+        background-color: #2980b9; /* Hover effect for dark mode */
+      }
+
+      body.dark-theme footer {
+        background-color: #34495e; /* Dark footer */
+      }
+
+      body.dark-theme button {
+        background-color: #2980b9; /* Darker button */
+      }
+
+      body.dark-theme button:hover {
+        background-color: #1abc9c; /* Button hover effect */
+      }
+
+      body.dark-theme .card {
+        background-color: #34495e; /* Dark card background */
+        color: #ecf0f1; /* Light text */
+      }
+
+      body.dark-theme .card-header {
+        background-color: #e74c3c; /* Red card header */
+      }
+
       /* Navbar Styles */
       .navbar {
         background-color: #1abc9c; /* Turquoise navbar */
@@ -140,88 +180,44 @@
         .navbar-nav .nav-link {
           font-size: 1em;
         }
-   .table-responsive .table tr:hover {
-  background-color: #f1f1f1; /* Change this color as needed */
-  cursor: pointer;
-}
-        /* Dark Theme Styles */
-body.dark-theme {
-  background-color: #2c3e50; /* Dark background */
-  color: #ecf0f1; /* Light text color */
-}
-
-body.dark-theme .navbar {
-  background-color: #34495e; /* Darker navbar */
-}
-
-body.dark-theme .navbar-brand,
-body.dark-theme .navbar-nav .nav-link {
-  color: #ecf0f1; /* Light text color */
-}
-
-body.dark-theme .navbar-nav .nav-link:hover {
-  background-color: #2980b9; /* Hover effect for dark mode */
-}
-
-body.dark-theme footer {
-  background-color: #34495e; /* Dark footer */
-}
-
-body.dark-theme button {
-  background-color: #2980b9; /* Darker button */
-}
-
-body.dark-theme button:hover {
-  background-color: #1abc9c; /* Button hover effect */
-}
-
-body.dark-theme .card {
-  background-color: #34495e; /* Dark card background */
-  color: #ecf0f1; /* Light text */
-}
-
-body.dark-theme .card-header {
-  background-color: #e74c3c; /* Red card header */
-}
-
       }
 
     </style>
   </head>
   <body>
     <div class="container">
-     <nav class="navbar navbar-expand-lg">
-       
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fantasy Football</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Fantasy Football</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="players.php">Players</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="teams.php">Teams</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ppg-and-ranking.php">Players PPG and Ranking</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="information.php">Information</a>
-        </li>
-      </ul>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fantasy Football</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Fantasy Football</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="players.php">Players</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="teams.php">Teams</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="ppg-and-ranking.php">Players PPG and Ranking</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="information.php">Information</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Display real-time clock in header -->
+          <div id="clock"></div>
+          <!-- Dark Mode Toggle Button -->
+          <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
+        </div>
+      </nav>
     </div>
-    <div id="clock"></div>
-    <!-- Dark Mode Toggle Button -->
-    <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
-  </div>
-</nav>
-
 
     <!-- Optional Hero Section -->
     <div class="hero-section">
@@ -268,18 +264,14 @@ body.dark-theme .card-header {
       updateClock(); // Initial call to show the time immediately
 
       // Dark mode toggle function
-document.getElementById('darkModeToggle').addEventListener('click', function() {
-  // Toggle the dark-theme class on the body element
-  document.body.classList.toggle('dark-theme');
-  
-  // Change button text based on theme
-  if (document.body.classList.contains('dark-theme')) {
-    this.textContent = "Switch to Light Mode";
-  } else {
-    this.textContent = "Switch to Dark Mode";
-  }
-});
-
+      document.getElementById('darkModeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme');
+        if (document.body.classList.contains('dark-theme')) {
+          this.textContent = "Switch to Light Mode";
+        } else {
+          this.textContent = "Switch to Dark Mode";
+        }
+      });
     </script>
   </body>
 </html>
