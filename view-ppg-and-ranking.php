@@ -61,3 +61,17 @@ include "view-ppg-newform.php";
       </tbody>
   </table>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const rows = document.querySelectorAll(".table-responsive .table tr");
+
+  rows.forEach(row => {
+    row.addEventListener("mouseenter", function () {
+      this.style.backgroundColor = "#f1f1f1";  // Highlight on hover
+    });
+    row.addEventListener("mouseleave", function () {
+      this.style.backgroundColor = ""; // Remove highlight when mouse leaves
+    });
+  });
+});
+</script>
