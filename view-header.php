@@ -140,6 +140,10 @@
         .navbar-nav .nav-link {
           font-size: 1em;
         }
+   .table-responsive .table tr:hover {
+  background-color: #f1f1f1; /* Change this color as needed */
+  cursor: pointer;
+}
       }
 
     </style>
