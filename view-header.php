@@ -181,7 +181,7 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">Top Players</h5>
-          <p class="card-text">Check out the top-performing players in the league!</p>     
+          <p class="card-text">Check out how player have been performing on your team!</p>     
         </div>
       </div>
     </div>
