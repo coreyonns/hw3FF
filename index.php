@@ -1,6 +1,6 @@
 <?php
 $pageTitle = "Fantasy Football Home";
-include('header.php');
+include('view-header.php');
 ?>
 <h1>Welcome to Fantasy Football</h1>
 <p>Your one-stop hub for managing your teams, players, and rankings.</p>
