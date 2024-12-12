@@ -10,7 +10,7 @@
     body {
       background: linear-gradient(135deg, #1e88e5, #43a047);
       font-family: 'Arial', sans-serif;
-      color: white;
+      color: #f5f5f5;
       padding: 20px;
     }
 
@@ -19,7 +19,7 @@
       text-align: center;
       margin-bottom: 20px;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      color: #f0f8ff;
+      color: #f5f5f5;
     }
 
     /* Navbar Styling */
@@ -50,7 +50,7 @@
 
     th {
       background-color: #ff5722; /* Orange Header */
-      color: white;
+      color: #f5f5f5;;
       padding: 12px;
       text-align: left;
       cursor: pointer;
