@@ -80,18 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     header.addEventListener("click", () => sortTable(index));
   });
 
-  // Delete button functionality with confirmation prompt
-  const deleteButtons = document.querySelectorAll("button[data-action='delete']");
-  deleteButtons.forEach(button => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault(); // Prevent form submission
-      const teamName = button.closest("tr").querySelector("td:nth-child(2)").textContent;
-      const confirmed = confirm(`Are you sure you want to delete the team "${teamName}"?`);
-      if (confirmed) {
-        button.closest("form").submit(); // Submit the delete form if confirmed
-      }
-    });
-  });
+ 
 
   // Function to filter teams based on the search input
   function filterTeams() {
