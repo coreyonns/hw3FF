@@ -24,7 +24,7 @@
 
     /* Navbar Styling */
     .navbar {
-      background-color: #212529;
+      background-color: #0d47a1; 
     }
     .navbar-brand, .nav-link {
       color: white !important;
