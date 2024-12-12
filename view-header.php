@@ -24,15 +24,16 @@
 
     /* Navbar Styling */
     .navbar {
-      background-color: #0d47a1; 
-    }
-    .navbar-brand, .nav-link {
-      color: white !important;
-    }
-    .navbar-brand:hover, .nav-link:hover {
-      color: #ff5722 !important;
-    }
+  background-color: #0d47a1; 
+}
 
+.navbar-brand, .nav-link {
+  color: white !important;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+  color: #ff5722 !important; 
+}
     /* Table Styling */
     .table-responsive {
       margin-top: 30px;
