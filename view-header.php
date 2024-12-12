@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?= $pageTitle?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
+<style>
     /* General Body Styling */
     body {
-      background: linear-gradient(135deg, #1a73e8, #ff9800);
+      background: linear-gradient(135deg, #1e88e5, #43a047);
       font-family: 'Arial', sans-serif;
       color: white;
       padding: 20px;
@@ -24,16 +24,15 @@
 
     /* Navbar Styling */
     .navbar {
-  background-color: #0d47a1; 
-}
+      background-color: #003366; /* Dark Blue */
+    }
+    .navbar-brand, .nav-link {
+      color: white !important;
+    }
+    .navbar-brand:hover, .nav-link:hover {
+      color: #ff5722 !important; /* Orange hover effect */
+    }
 
-.navbar-brand, .nav-link {
-  color: white !important;
-}
-
-.navbar-brand:hover, .nav-link:hover {
-  color: #ff5722 !important; 
-}
     /* Table Styling */
     .table-responsive {
       margin-top: 30px;
@@ -50,7 +49,7 @@
     }
 
     th {
-      background-color: #ff5722;
+      background-color: #ff5722; /* Orange Header */
       color: white;
       padding: 12px;
       text-align: left;
@@ -65,7 +64,7 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f7f7f7;
+      background-color: #f5f5f5; /* Light gray */
     }
 
     tr:hover {
@@ -76,7 +75,7 @@
     }
 
     .btn-primary {
-      background-color: #2196f3;
+      background-color: #2196f3; /* Blue for primary button */
       border-color: #2196f3;
       color: white;
     }
@@ -87,7 +86,7 @@
     }
 
     .btn-danger {
-      background-color: #f44336;
+      background-color: #f44336; /* Red for delete button */
       border-color: #f44336;
     }
 
@@ -102,14 +101,14 @@
       padding: 15px;
       font-size: 1.1rem;
       border-radius: 25px;
-      border: 2px solid #ff5722;
+      border: 2px solid #ff5722; /* Orange border */
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
       width: 100%;
     }
 
     .search-bar:focus {
       outline: none;
-      border-color: #2196f3;
+      border-color: #2196f3; /* Blue focus border */
     }
 
     /* Add Football Icon in Button */
@@ -126,7 +125,7 @@
 
     /* Custom Styling for Add Team Button */
     .add-team-btn {
-      background-color: #4caf50;
+      background-color: #4caf50; /* Green for add team button */
       border-color: #4caf50;
       padding: 10px 20px;
       font-size: 1.1rem;
