@@ -6,6 +6,80 @@
     <title><?= $pageTitle?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
+   <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+    }
+
+    .table-responsive {
+      margin-top: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+
+    .table-active {
+      background-color: #cce5ff !important;
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .modal-content {
+      border-radius: 10px;
+    }
+
+    .modal-header {
+      background-color: #007bff;
+      color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .modal-footer button {
+      border-radius: 5px;
+    }
+  </style>
   <body>
    <div class "container">
      <nav class="navbar navbar-expand-lg bg-body-tertiary">
