@@ -210,7 +210,10 @@
                 <a class="nav-link" href="information.php">Information</a>
                  <a class="nav-link" href="players-chart.php">Player Yard Comparison</a>
               </li>
-             
+
+               <li class="nav-item">
+                <a class="nav-link" href="position-chart.php">Position Count</a>
+              </li>
           </div>
           <!-- Display real-time clock in header -->
           <div id="clock"></div>
