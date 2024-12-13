@@ -208,7 +208,7 @@
                 <a class="nav-link" href="ppg-and-ranking.php">Players PPG and Ranking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="information.php">Information</a>
+                <a class="nav-link" href="information.php">Last Game Stats</a>
                  <a class="nav-link" href="players-chart.php">Player Yard Comparison</a>
               </li>
 
