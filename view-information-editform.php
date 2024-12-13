@@ -1,11 +1,4 @@
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
- <script>
-    // Animate the navbar on page load
-    gsap.from(".navbar", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
 
-    // Add a pulsing effect to buttons
-    gsap.to(".btn", { duration: 1, scale: 1.2, repeat: -1, yoyo: true });
-  </script>
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editInfoModal<?php echo $infos['information_id']; ?>">
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
