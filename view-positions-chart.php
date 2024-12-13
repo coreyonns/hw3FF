@@ -15,12 +15,8 @@
 
   <script>
     // Example data: Player names and their yards
-    const playerNames = [ <?php 
-    while ($player = $players->fetch_assoc()) {
-      echo "'" . $player ['player_name'] . ", ";
-    }
-   ?>];
-    const playerYards = [120, 200, 150, 300];
+    const playerNames = [Breece Hall, Puka Nacua, Sam Laporta, David Montgomery, Zay Flowers,Kareem Hunt,Jayden Daniels,Marvin Harrison Jr];
+    const playerYards = [85, 11, 28, 96,127,59,34];
 
     // Chart configuration
     const ctx = document.getElementById('playerYardsChart').getContext('2d');
