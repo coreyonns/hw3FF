@@ -229,18 +229,7 @@
       <div class="hero-text">Welcome to Fantasy Football</div>
     </div>
 
-    <!-- Example Card -->
-    <div class="container mt-5">
-      <div class="card">
-        <div class="card-header">
-          Player Stats
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Top Players</h5>
-          <p class="card-text">Check out how player have been performing on your team!</p>     
-        </div>
-      </div>
-    </div>
+  
 
     <!-- Footer -->
     <footer>
