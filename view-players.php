@@ -1,4 +1,3 @@
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
  
 <div class="row">
   <div class="col">
@@ -57,13 +56,6 @@
     </tbody>
   </table>
 </div>
-<script>
-    // Animate the navbar on page load
-    gsap.from(".navbar", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
-
-    // Add a pulsing effect to buttons
-    gsap.to(".btn", { duration: 1, scale: 1.2, repeat: -1, yoyo: true });
-  </script>
 
 <script>
   // JavaScript function to filter players in the table
