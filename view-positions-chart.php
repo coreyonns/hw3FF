@@ -9,14 +9,14 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center">Player Positions Chart</h1>
+    <h1 class="text-center">Player Positions Count</h1>
     <canvas id="positionsChart" width="400" height="200"></canvas>
   </div>
 
   <script>
     // Example data: Positions and their counts
     const positions = ['Quarterback (QB)', 'Wide Receiver (WR)', 'Running Back (RB)', 'Tight End (TE)', 'Kicker (K)'];
-    const positionCounts = [8, 15, 12, 6, 5]; // Example counts of each position
+    const positionCounts = [1, 3, 3, 1, 0]; // Example counts of each position
 
     // Chart configuration
     const ctx = document.getElementById('positionsChart').getContext('2d');
