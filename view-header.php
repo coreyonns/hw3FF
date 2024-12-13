@@ -249,7 +249,15 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb9kVOGy4MxVg1n04g6e37NdF2fQtrdQ5ooPjtFqX3v30zIa0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-ndR56aNeODv77a5zRfPEuKzZ5nVs8TxTAn26wV7Rnvnu3HTQK5w1V9PyXbXYUNnhR" crossorigin="anonymous"></script>
-    <script>
+   <script>
+    // Animate the navbar on page load
+    gsap.from(".navbar", { duration: 1, y: -50, opacity: 0, ease: "bounce" });
+
+    // Add a pulsing effect to buttons
+    gsap.to(".btn", { duration: 1, scale: 1.2, repeat: -1, yoyo: true });
+  </script>
+
+      <script>
       // Real-time clock function
       function updateClock() {
         const now = new Date();
