@@ -190,6 +190,18 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Fantasy Football</a>
+          <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          Player Stats
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Your Players</h5>
+          <p class="card-text">Check out how player have been performing on your team!</p>     
+        </div>
+      </div>
+    </div>
+
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -230,18 +242,7 @@
     </div>
 
     <!-- Example Card -->
-    <div class="container mt-5">
-      <div class="card">
-        <div class="card-header">
-          Player Stats
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Top Players</h5>
-          <p class="card-text">Check out how player have been performing on your team!</p>     
-        </div>
-      </div>
-    </div>
-
+    
     <!-- Footer -->
     <footer>
       Fantasy Football League &copy; 2024
