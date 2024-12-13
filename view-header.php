@@ -1,3 +1,4 @@
+  View-Header.php
 <!doctype html>
 <html lang="en">
   <head>
@@ -187,7 +188,9 @@
   </head>
   <body>
     <div class="container">
-    
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fantasy Football</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -206,7 +209,7 @@
                 <a class="nav-link" href="ppg-and-ranking.php">Players PPG and Ranking</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="information.php">Last Game Stats</a>
+                <a class="nav-link" href="information.php">Information</a>
                  <a class="nav-link" href="players-chart.php">Player Yard Comparison</a>
               </li>
 
@@ -234,7 +237,7 @@
           Player Stats
         </div>
         <div class="card-body">
-          <h5 class="card-title">Your Players</h5>
+          <h5 class="card-title">Top Players</h5>
           <p class="card-text">Check out how player have been performing on your team!</p>     
         </div>
       </div>
@@ -284,5 +287,9 @@
         }
       });
     </script>
+  </body>
+</html>
+
+
   </body>
 </html>
