@@ -212,7 +212,7 @@
               </li>
 
                <li class="nav-item">
-                <a class="nav-link" href="position-chart.php">Position Count</a>
+                <a class="nav-link" href="positions-chart.php">Position Count</a>
               </li>
           </div>
           <!-- Display real-time clock in header -->
