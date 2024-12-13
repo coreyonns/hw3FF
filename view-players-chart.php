@@ -1,8 +1,9 @@
 <h1>Players Chart</h1>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
+
 <div>
   <canvas id="myChart"></canvas>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
 <script>
   const ctx = document.getElementById('myChart');
 
