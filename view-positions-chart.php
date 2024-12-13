@@ -1,34 +1,61 @@
-<h1>Position Count</h1>
-<div>
-  <canvas id="myChart"></canvas>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>'
-<script>
-  const ctx = document.getElementById('myChart');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Positions Chart</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Player Positions Chart</h1>
+    <canvas id="positionsChart" width="400" height="200"></canvas>
+  </div>
 
-  new Chart(ctx, {
-    type: 'doughnut',
-    data:{
-    datasets: [{
-        data: [
-    <?php
-    while ($player = $players->fetch_assoc()) {
-      echo $player ['player_position'] . ", ";
-    }
-   ?>
-        ]
-    }],
+  <script>
+    // Example data: Positions and their counts
+    const positions = ['Quarterback (QB)', 'Wide Receiver (WR)', 'Running Back (RB)', 'Tight End (TE)', 'Kicker (K)'];
+    const positionCounts = [8, 15, 12, 6, 5]; // Example counts of each position
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-         <?php
-    $players= selectsPlayers();
-    while ($player = $players->fetch_assoc()) {
-      echo "'" . $player ['num_position'] . ", ";
-    }
-   ?>
-    ]
-},
-  });
-</script>
- 
+    // Chart configuration
+    const ctx = document.getElementById('positionsChart').getContext('2d');
+    const positionsChart = new Chart(ctx, {
+      type: 'doughnut', // Doughnut chart
+      data: {
+        labels: positions, // Position names
+        datasets: [{
+          data: positionCounts, // Counts for each position
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: true,
+            position: 'top'
+          },
+          tooltip: {
+            enabled: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
