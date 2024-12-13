@@ -9,14 +9,14 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center">Player Yards Comparison</h1>
+    <h1 class="text-center">Player Yards Chart</h1>
     <canvas id="playerYardsChart" width="400" height="200"></canvas>
   </div>
 
   <script>
     // Example data: Player names and their yards
-    const playerNames = [Breece Hall, Puka Nacua, Sam Laporta, David Montgomery, Zay Flowers,Kareem Hunt,Jayden Daniels,Marvin Harrison Jr];
-    const playerYards = [85, 11, 28, 96,127,59,34];
+    const playerNames = ['Player A', 'Player B', 'Player C', 'Player D'];
+    const playerYards = [120, 200, 150, 300];
 
     // Chart configuration
     const ctx = document.getElementById('playerYardsChart').getContext('2d');
