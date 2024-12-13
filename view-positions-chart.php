@@ -9,13 +9,17 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center">Player Yards Chart</h1>
+    <h1 class="text-center">Player Yards Comparison</h1>
     <canvas id="playerYardsChart" width="400" height="200"></canvas>
   </div>
 
   <script>
     // Example data: Player names and their yards
-    const playerNames = ['Player A', 'Player B', 'Player C', 'Player D'];
+    const playerNames = [ <?php 
+    while ($player = $players->fetch_assoc()) {
+      echo "'" . $player ['player_name'] . ", ";
+    }
+   ?>];
     const playerYards = [120, 200, 150, 300];
 
     // Chart configuration
